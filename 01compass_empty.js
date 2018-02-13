@@ -5,7 +5,7 @@ oriented = function(e) {
         if(e.webkitCompassHeading) {
             compassHeading = e.webkitCompassHeading;
         }   else  { 
-            compassHeading = e.alpha;
+            compassHeading = 360 - e.alpha;
         }
         
         if(compassHeading > 315 || compassHeading < 45) {
