@@ -7,20 +7,35 @@ oriented = function(e) {
         }   else  { 
             compassHeading = 360 - e.alpha;
         }
-        
-        if(compassHeading > 315 || compassHeading < 45) {
-             text_area.textContent = "north";
+        //north
+        if(compassHeading > 330 || compassHeading < 20) {
+             text_area.textContent = "tremendous velocity";
+    }   //northeast
+        if(compassHeading >= 20 && compassHeading < 60) {
+             text_area.textContent = "steam";
+    }   //east
+        if(compassHeading >= 60 && compassHeading < 110) {
+             text_area.textContent = "indurated";
+    }   //southeast
+        if(compassHeading >= 110 && compassHeading < 160) {
+             text_area.textContent = "facing outwards";
     }
-        if(compassHeading >= 45 && compassHeading < 135) {
-             text_area.textContent = "east";
+        //south
+        if(compassHeading >= 160 && compassHeading < 200) {
+             text_area.textContent = "fading earthwards";
+    }   
+        //southwest
+        if(compassHeading >= 200 && compassHeading < 240) {
+             text_area.textContent = "as I recall";
     }
-        if(compassHeading >= 135 && compassHeading < 225) {
-             text_area.textContent = "south";
+        //west
+        if(compassHeading >= 240 && compassHeading < 290) {
+             text_area.textContent = "t h e  s i s t e r s";
     }
-        if(compassHeading >= 225 && compassHeading < 315) {
-             text_area.textContent = "west";
+        //northwest
+        if(compassHeading >= 290 && compassHeading <= 330) {
+             text_area.textContent = "who lived here in my childhood";
     }
-    
          
         //calls function to alter content based on heading
        // myOrientation();
