@@ -9,31 +9,32 @@ oriented = function(e) {
         }
         //north
         if(compassHeading > 330 || compassHeading < 20) {
-             text_area.textContent = "grinning, toothless, white hairs sprouting from \n their doughy chins, round and soft. \n they were ancient, even then. \n I remember their long skirts and small steps, \n moving slowly, voices crackling with delight. \n I wonder if, in their final years, the noise";
+             text_area.textContent = "tremendous velocity";
     }   //northeast
         if(compassHeading >= 20 && compassHeading < 60) {
-             text_area.textContent = "of the 18-wheelers bothered them or if \n at that point \n they were too deaf to notice \n the endless whine of motors \n the kinetic anxiety of wheels  \n struggling to round the uphill curve on their way";
+             text_area.textContent = "steam";
+        //east
         if(compassHeading >= 60 && compassHeading < 110) {
-             text_area.textContent = "East, to flatter, straighter roads.";
+             text_area.textContent = "facing outwards";
     }   //southeast
         if(compassHeading >= 110 && compassHeading < 160) {
-             text_area.textContent = "Rain this day. Some ice, actually. \n The door of the shed creaks. \n This one is most recently habited of all of them.";
+             text_area.textContent = "fading earthward";
     }
         //south
         if(compassHeading >= 160 && compassHeading < 200) {
-             text_area.textContent = "The one wooden chair \n I could see through the back door window \n faced me \n South.";
+             text_area.textContent = "as I recall";
     }   
         //southwest
         if(compassHeading >= 200 && compassHeading < 240) {
-             text_area.textContent = "I had seen the young couple hauling wood and weeding. \n Wind cuts out. \n A 2x4 props open a window.";
+             text_area.textContent = "t h e  s i s t e r s";
     }
         //west
         if(compassHeading >= 240 && compassHeading < 290) {
-             text_area.textContent = "2 years ago I had walked onto the back porch \n with my mother and father. Some wooden slats \n framed holes in the floor that gaped clear to the foundation. \n A rooster cries. ";
+             text_area.textContent = "who lived here";
     }
         //northwest
         if(compassHeading >= 290 && compassHeading <= 330) {
-             text_area.textContent = "tremendous velocity \n steam \n right up against \n indurate \n facing outwards \n fading earthward \n as i recall \n the sisters who lived here in my childhood";
+             text_area.textContent = "grinning, toothless";
     }
          
         //calls function to alter content based on heading
