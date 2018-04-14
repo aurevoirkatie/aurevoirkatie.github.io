@@ -60,13 +60,14 @@ window.addEventListener('deviceorientation', function(e) {
 function draw(){
 pinetrail.play();
     if(compassHeading % 20 == 0){
-        var freq = compassHeading;
-            filter.pinetrail(freq);
-            filter.res(50);
-            pinetrail.play();
-            text_area.innerHTML = " ";     
+        // var freq = compassHeading;
+        //     filter.pinetrail(freq);
+        //     filter.res(50);
+        //     pinetrail.play();
+        //     text_area.innerHTML = " "; 
+        pinetrail.pause();    
     };
-    else pinetrail.pause();
+
 // if(compassHeading >= 25 && compassHeading < 35){
 //             if(forNorth.isPlaying() == true){
 //             forNorth.pause();
