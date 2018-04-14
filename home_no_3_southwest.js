@@ -39,13 +39,13 @@ function setup() {
     // recorder.setInput(mic);
     // soundFile = new p5.SoundFile();
     // text('keyPress to record', 20, 20);
-    filter = new p5.BandPass();
-    noise = new p5.Noise();
-    noise.disconnect();
-    noise.connect(filter);
-    noise.start();
-    fft = new p5.FFT();
-}
+    // filter = new p5.BandPass();
+    // noise = new p5.Noise();
+    // noise.disconnect();
+    // noise.connect(filter);
+    // noise.start();
+    // fft = new p5.FFT();
+
   
 window.addEventListener('deviceorientation', function(e) {
     var alpha = e.alpha;
