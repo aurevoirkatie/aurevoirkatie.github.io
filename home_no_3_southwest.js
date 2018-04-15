@@ -26,7 +26,7 @@ var timer;
 // var splitTimer;
 
 function setup() {
-    canvas = createCanvas(window.innerWidth, window.innerHeight);
+    canvas = createCanvas(windowWidth, windowHeight);
     loss_no_3.setVolume(1.0);
     loss_no_3.playMode('untilDone');
     original_no_3.setVolume(1.0);
@@ -66,7 +66,7 @@ function playbaqq() {
 function draw(){
 fill(0,0,255);
 noStroke();
-rect(300, 300, windowWidth, windowHeight);
+rect(0, 400, windowWidth, 50);
 
 //counters
 
