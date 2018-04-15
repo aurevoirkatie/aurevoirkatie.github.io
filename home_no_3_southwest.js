@@ -8,7 +8,7 @@ function success() {
 function preload() {
  soundFormats('mp3', 'ogg');
     loss_no_3 = loadSound('assets/home_no_3_degradeOnly.mp3', success);
-    //original_no_3 = loadSound('assets/pinetrail1.mp3');
+    original_no_3 = loadSound('assets/pinetrail1.mp3', success);
 };
 
 var text_area;
@@ -16,14 +16,23 @@ var content_home3;
 var compassHeading;
 var filterFreq;
 var timer;
+// var contentIndex;
+// var printedText;
+// var textTimer;
+// var threeTwo;
+// var threeThree;
+// var threeFour;
+// var contentSplit;
+// var splitTimer;
 
 function setup() {
     canvas = createCanvas(window.innerWidth, window.innerHeight);
     loss_no_3.setVolume(1.0);
     loss_no_3.playMode('untilDone');
-    //original_no_3.setVolume(1.0);
-    //original_no_3.playMode('untilDone');
-    content_home3 = ["2.0", "2.1", "2.2", "2.3", "2.4", "2.5", "2.6", "2.7", "2.8", "2.9"];
+    original_no_3.setVolume(1.0);
+    original_no_3.playMode('untilDone');
+    content_home3 = ["3.0 three", "3.1 when the highway was distant enough", "3.2 for drips to ring louder than", "3.3 passing trucks who sliced the landscape", "3.4 perpendicular in a Cartesian split", "3.5 to the water systems whose homely stasis", "3.6 ran up and down", "3.7 up and down", "3.8 quartz rock is often left abandoned by whatever waters bore it upstream", "3.9 northeast"];
+
     text_area = document.getElementById("compass_content");
     i = .001;
     filterFreq = 100;
@@ -32,6 +41,7 @@ function setup() {
     loss_no_3.connect(filter);
     filter.amp(1.0, 20, 0)
     timer = 0;
+    textFont("courier", 10);
 
   
 window.addEventListener('deviceorientation', function(e) {
@@ -46,12 +56,12 @@ function playbaqq() {
     var freq = filterFreq;
         filter.freq(freq);
         filter.res(i);
-        
-        // if(original_no_3.isPlaying() == true){
-        //     original_no_3.pause();
-        //     };
+        if(original_no_3.isPlaying() == true){
+             original_no_3.pause();
+             };
         text_area.innerHTML = "";
     };
+
        
 function draw(){
 //counters
@@ -72,13 +82,15 @@ function draw(){
         } else {i = i - 1;
         };
     };
+//format text
+    // textAlign(CENTER);
 
  //text and sound triggers   
     if(compassHeading >= 355 || compassHeading <=5){
         text_area.innerHTML = content_home3[0];
-        //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
+            original_no_3.play();
             };
     };
 
@@ -102,9 +114,9 @@ function draw(){
 
     if(compassHeading >= 67 && compassHeading <=77){
         text_area.innerHTML = content_home3[2];
-        //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
+            original_no_3.play();
             };
     };
 
@@ -115,7 +127,6 @@ function draw(){
 
     if(compassHeading >= 103 && compassHeading <=113){
         text_area.innerHTML = content_home3[3];
-        //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             };
@@ -128,9 +139,9 @@ function draw(){
 
     if(compassHeading >= 139 && compassHeading <=149){
         text_area.innerHTML = content_home3[4];
-        //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
+            original_no_3.play();
             };
     };
 
@@ -141,7 +152,6 @@ function draw(){
 
     if(compassHeading >= 175 && compassHeading <=185){
         text_area.innerHTML = content_home3[4];
-        //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             };
@@ -154,9 +164,9 @@ function draw(){
 
     if(compassHeading >= 211 && compassHeading <=221){
         text_area.innerHTML = content_home3[5];
-        //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
+            original_no_3.play();
             };
     };
 
@@ -167,7 +177,6 @@ function draw(){
 
     if(compassHeading >= 247 && compassHeading <=257){
         text_area.innerHTML = content_home3[6];
-        //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             };
@@ -180,9 +189,9 @@ function draw(){
 
     if(compassHeading >= 283 && compassHeading <=288){
         text_area.innerHTML = content_home3[7];
-        //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
+            original_no_3.play();
             };
     };
 
@@ -193,7 +202,6 @@ function draw(){
 
     if(compassHeading >=319 && compassHeading <=329){
         text_area.innerHTML = content_home3[8];
-        //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             };
@@ -203,8 +211,8 @@ function draw(){
         loss_no_3.stop();
     };
 
-    // if (timeinseconds >= original_no_3.duration()){
-    //     original_no_3.stop();
-    // };
+    if (timeinseconds >= original_no_3.duration()){
+         original_no_3.stop();
+     };
 };
 
