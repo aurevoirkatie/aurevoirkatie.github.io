@@ -33,16 +33,7 @@ function setup() {
     filter.amp(1.0, 20, 0)
     timer = 1;
 
-  
-window.addEventListener('deviceorientation', function(e) {
-    var alpha = e.alpha;
-        if(e.webkitCompassHeading){
-            compassHeading = e.webkitCompassHeading;
-        } else compassHeading = 360 - alpha;
-    });
-};
-
-function playbaqq() {
+    function playbaqq() {
     var freq = filterFreq;
         filter.freq(freq);
         filter.res(i);
@@ -51,6 +42,15 @@ function playbaqq() {
         //     original_no_3.pause();
         //     };
         text_area.innerHTML = "";
+    };
+
+  
+window.addEventListener('deviceorientation', function(e) {
+    var alpha = e.alpha;
+        if(e.webkitCompassHeading){
+            compassHeading = e.webkitCompassHeading;
+        } else compassHeading = 360 - alpha;
+    });
 };
        
 function draw(){
