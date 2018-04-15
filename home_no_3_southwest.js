@@ -12,7 +12,7 @@ function success() {
 function preload() {
  soundFormats('mp3', 'ogg');
     loss_no_3 = loadSound('assets/home_no_3_degradeOnly.mp3', success);
-    original_no_3 = loadSound('assets/pinetrail.mp3');
+    original_no_3 = loadSound('assets/pinetrail1.mp3');
 };
 
 var text_area;
