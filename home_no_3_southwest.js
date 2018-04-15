@@ -41,7 +41,7 @@ function setup() {
     loss_no_3.connect(filter);
     filter.amp(1.0, 20, 0)
     timer = 0;
-    textFont("courier", 18);
+    textFont("courier", 25);
 
   
 window.addEventListener('deviceorientation', function(e) {
