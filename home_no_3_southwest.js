@@ -1,9 +1,5 @@
 var myBody = document.getElementsByTagName("body");
 
-// function vidLoad(){
-//     vid1.hide()
-// }
-
 function success() {
     myBody[0].style.backgroundColor = "#0000FF";
     console.log("hiiiii");
@@ -12,7 +8,7 @@ function success() {
 function preload() {
  soundFormats('mp3', 'ogg');
     loss_no_3 = loadSound('assets/home_no_3_degradeOnly.mp3', success);
-    ////original_no_3 = loadSound('assets/pinetrail1.mp3');
+    //original_no_3 = loadSound('assets/pinetrail1.mp3');
 };
 
 var text_area;
@@ -51,11 +47,11 @@ function playbaqq() {
         filter.freq(freq);
         filter.res(i);
         loss_no_3.play();
-        if(//original_no_3.isPlaying() == true){
-            //original_no_3.pause();
-            };
+        // if(original_no_3.isPlaying() == true){
+        //     original_no_3.pause();
+        //     };
         text_area.innerHTML = "";
-}
+};
        
 function draw(){
 //counters
@@ -197,8 +193,8 @@ function draw(){
         loss_no_3.stop();
     };
 
-    if (timeinseconds >= //original_no_3.duration()){
-        //original_no_3.stop();
-    };
+    // if (timeinseconds >= original_no_3.duration()){
+    //     original_no_3.stop();
+    // };
 };
 
