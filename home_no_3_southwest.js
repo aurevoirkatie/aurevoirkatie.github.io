@@ -8,7 +8,7 @@ function success() {
 function preload() {
  soundFormats('mp3', 'ogg');
     loss_no_3 = loadSound('assets/home_no_3_degradeOnly.mp3', success);
-    original_no_3 = loadSound('assets/alternate.mp3', success);
+    original_no_3 = loadSound('assets/pinetrail_excerpt.mp3', success);
 };
 
 var text_area;
@@ -60,19 +60,22 @@ function playbaqq() {
              original_no_3.pause();
              };
         text_area.innerHTML = "";
+        fill(0);
+        NoStroke();
+        rect(0, 0, windowWidth, 500);
     };
 
        
 function draw(){
 fill(0,0,255);
 noStroke();
-rect(0, 400, windowWidth, 500);
+rect(0, 800, windowWidth, 500);
 
 //counters
 
     timer ++;
     var timeinseconds = timer/60
-    console.log(timeinseconds);
+    //console.log(timeinseconds);
 
 
     if (filterFreq <= 10000){
@@ -93,7 +96,8 @@ rect(0, 400, windowWidth, 500);
     if(compassHeading >= 355 || compassHeading <=5){
         //text_area.innerHTML = content_home3[0];
         fill(255);
-        text(content_home3[0], windowWidth/2, windowHeight/2);
+        background(0);
+        text(content_home3[0], windowWidth/2, windowHeight*.75);
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             original_no_3.play();
@@ -106,7 +110,10 @@ rect(0, 400, windowWidth, 500);
     };
 
     if(compassHeading >= 31 && compassHeading <=41){
-        text_area.innerHTML = content_home3[1];
+        fill(255);
+        background(0);
+        text(content_home3[1], windowWidth/2, windowHeight*.75);
+        //text_area.innerHTML = content_home3[1];
         //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
@@ -119,7 +126,10 @@ rect(0, 400, windowWidth, 500);
     };
 
     if(compassHeading >= 67 && compassHeading <=77){
-        text_area.innerHTML = content_home3[2];
+        fill(255);
+        background(0);
+        text(content_home3[2], windowWidth/2, windowHeight*.75);
+        //text_area.innerHTML = content_home3[2];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             original_no_3.play();
@@ -132,7 +142,10 @@ rect(0, 400, windowWidth, 500);
     };
 
     if(compassHeading >= 103 && compassHeading <=113){
-        text_area.innerHTML = content_home3[3];
+        fill(255);
+        background(0);
+        text(content_home3[3], windowWidth/2, windowHeight*.75);
+        //text_area.innerHTML = content_home3[3];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             };
@@ -144,7 +157,10 @@ rect(0, 400, windowWidth, 500);
     };
 
     if(compassHeading >= 139 && compassHeading <=149){
-        text_area.innerHTML = content_home3[4];
+        fill(255);
+        background(0);
+        text(content_home3[4], windowWidth/2, windowHeight*.75);
+        //text_area.innerHTML = content_home3[4];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             original_no_3.play();
@@ -157,7 +173,10 @@ rect(0, 400, windowWidth, 500);
     };
 
     if(compassHeading >= 175 && compassHeading <=185){
-        text_area.innerHTML = content_home3[4];
+        fill(255);
+        background(0);
+        text(content_home3[5], windowWidth/2, windowHeight*.75);
+        //text_area.innerHTML = content_home3[4];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             };
@@ -169,7 +188,10 @@ rect(0, 400, windowWidth, 500);
     };
 
     if(compassHeading >= 211 && compassHeading <=221){
-        text_area.innerHTML = content_home3[5];
+        fill(255);
+        background(0);
+        text(content_home3[6], windowWidth/2, windowHeight*.75);
+        //text_area.innerHTML = content_home3[5];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             original_no_3.play();
@@ -182,7 +204,10 @@ rect(0, 400, windowWidth, 500);
     };
 
     if(compassHeading >= 247 && compassHeading <=257){
-        text_area.innerHTML = content_home3[6];
+        fill(255);
+        background(0);
+        text(content_home3[7], windowWidth/2, windowHeight*.75);
+        //text_area.innerHTML = content_home3[6];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             };
@@ -194,7 +219,10 @@ rect(0, 400, windowWidth, 500);
     };
 
     if(compassHeading >= 283 && compassHeading <=288){
-        text_area.innerHTML = content_home3[7];
+        fill(255);
+        background(0);
+        text(content_home3[8], windowWidth/2, windowHeight*.75);
+        //text_area.innerHTML = content_home3[7];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             original_no_3.play();
@@ -207,7 +235,10 @@ rect(0, 400, windowWidth, 500);
     };
 
     if(compassHeading >=319 && compassHeading <=329){
-        text_area.innerHTML = content_home3[8];
+        fill(255);
+        background(0);
+        text(content_home3[9], windowWidth/2, windowHeight*.75);
+        //text_area.innerHTML = content_home3[8];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             };
