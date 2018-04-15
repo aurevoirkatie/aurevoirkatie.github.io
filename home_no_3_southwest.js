@@ -8,7 +8,7 @@ function success() {
 function preload() {
  soundFormats('mp3', 'ogg');
     loss_no_3 = loadSound('assets/home_no_3_degradeOnly.mp3', success);
-    original_no_3 = loadSound('assets/pinetrail.mp3', success);
+    original_no_3 = loadSound('assets/alternate.mp3', success);
 };
 
 var text_area;
@@ -66,7 +66,7 @@ function playbaqq() {
 function draw(){
 fill(0,0,255);
 noStroke();
-rect(0, 400, windowWidth, 50);
+rect(0, 400, windowWidth, 500);
 
 //counters
 
