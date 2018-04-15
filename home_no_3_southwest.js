@@ -61,7 +61,7 @@ function playbaqq() {
              };
         text_area.innerHTML = "";
         fill(0);
-        NoStroke();
+        noStroke();
         rect(0, 0, windowWidth, 500);
     };
 
@@ -97,7 +97,7 @@ rect(0, 800, windowWidth, 500);
         //text_area.innerHTML = content_home3[0];
         fill(255);
         background(0);
-        text(content_home3[0], windowWidth/2, windowHeight*.75);
+        text(content_home3[0], windowWidth/2, windowHeight/4);
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             original_no_3.play();
@@ -112,7 +112,7 @@ rect(0, 800, windowWidth, 500);
     if(compassHeading >= 31 && compassHeading <=41){
         fill(255);
         background(0);
-        text(content_home3[1], windowWidth/2, windowHeight*.75);
+        text(content_home3[1], windowWidth/2, windowHeight/4);
         //text_area.innerHTML = content_home3[1];
         //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
@@ -128,7 +128,7 @@ rect(0, 800, windowWidth, 500);
     if(compassHeading >= 67 && compassHeading <=77){
         fill(255);
         background(0);
-        text(content_home3[2], windowWidth/2, windowHeight*.75);
+        text(content_home3[2], windowWidth/2, windowHeight/4);
         //text_area.innerHTML = content_home3[2];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
@@ -144,7 +144,7 @@ rect(0, 800, windowWidth, 500);
     if(compassHeading >= 103 && compassHeading <=113){
         fill(255);
         background(0);
-        text(content_home3[3], windowWidth/2, windowHeight*.75);
+        text(content_home3[3], windowWidth/2, windowHeight/4);
         //text_area.innerHTML = content_home3[3];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
@@ -159,7 +159,7 @@ rect(0, 800, windowWidth, 500);
     if(compassHeading >= 139 && compassHeading <=149){
         fill(255);
         background(0);
-        text(content_home3[4], windowWidth/2, windowHeight*.75);
+        text(content_home3[4], windowWidth/2, windowHeight/4);
         //text_area.innerHTML = content_home3[4];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
@@ -175,7 +175,7 @@ rect(0, 800, windowWidth, 500);
     if(compassHeading >= 175 && compassHeading <=185){
         fill(255);
         background(0);
-        text(content_home3[5], windowWidth/2, windowHeight*.75);
+        text(content_home3[5], windowWidth/2, windowHeight/4);
         //text_area.innerHTML = content_home3[4];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
@@ -190,7 +190,7 @@ rect(0, 800, windowWidth, 500);
     if(compassHeading >= 211 && compassHeading <=221){
         fill(255);
         background(0);
-        text(content_home3[6], windowWidth/2, windowHeight*.75);
+        text(content_home3[6], windowWidth/2, windowHeight/4);
         //text_area.innerHTML = content_home3[5];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
@@ -206,7 +206,7 @@ rect(0, 800, windowWidth, 500);
     if(compassHeading >= 247 && compassHeading <=257){
         fill(255);
         background(0);
-        text(content_home3[7], windowWidth/2, windowHeight*.75);
+        text(content_home3[7], windowWidth/2, windowHeight/4);
         //text_area.innerHTML = content_home3[6];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
@@ -221,7 +221,7 @@ rect(0, 800, windowWidth, 500);
     if(compassHeading >= 283 && compassHeading <=288){
         fill(255);
         background(0);
-        text(content_home3[8], windowWidth/2, windowHeight*.75);
+        text(content_home3[8], windowWidth/2, windowHeight/4);
         //text_area.innerHTML = content_home3[7];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
@@ -237,7 +237,7 @@ rect(0, 800, windowWidth, 500);
     if(compassHeading >=319 && compassHeading <=329){
         fill(255);
         background(0);
-        text(content_home3[9], windowWidth/2, windowHeight*.75);
+        text(content_home3[9], windowWidth/2, windowHeight/4);
         //text_area.innerHTML = content_home3[8];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
