@@ -75,7 +75,7 @@ function draw(){
 
  //text and sound triggers   
     if(compassHeading >= 355 || compassHeading <=5){
-        text_area.innerHTML = auxText[0];
+        text_area.innerHTML = content_home3[0];
         //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
@@ -87,7 +87,7 @@ function draw(){
     };
 
     if(compassHeading >= 31 && compassHeading <=41){
-        text_area.innerHTML = auxText[1];
+        text_area.innerHTML = content_home3[1];
         //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
@@ -99,7 +99,7 @@ function draw(){
     };
 
     if(compassHeading >= 67 && compassHeading <=77){
-        text_area.innerHTML = auxText[2];
+        text_area.innerHTML = content_home3[2];
         //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
@@ -111,7 +111,7 @@ function draw(){
     };
 
     if(compassHeading >= 103 && compassHeading <=113){
-        text_area.innerHTML = auxText[3];
+        text_area.innerHTML = content_home3[3];
         //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
@@ -123,7 +123,7 @@ function draw(){
     };
 
     if(compassHeading >= 139 && compassHeading <=149){
-        text_area.innerHTML = auxText[4];
+        text_area.innerHTML = content_home3[4];
         //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
@@ -135,7 +135,7 @@ function draw(){
     };
 
     if(compassHeading >= 175 && compassHeading <=185){
-        text_area.innerHTML = auxText[4];
+        text_area.innerHTML = content_home3[4];
         //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
@@ -147,7 +147,7 @@ function draw(){
     };
 
     if(compassHeading >= 211 && compassHeading <=221){
-        text_area.innerHTML = auxText[5];
+        text_area.innerHTML = content_home3[5];
         //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
@@ -159,7 +159,7 @@ function draw(){
     };
 
     if(compassHeading >= 247 && compassHeading <=257){
-        text_area.innerHTML = auxText[6];
+        text_area.innerHTML = content_home3[6];
         //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
@@ -171,7 +171,7 @@ function draw(){
     };
 
     if(compassHeading >= 283 && compassHeading <=288){
-        text_area.innerHTML = auxText[7];
+        text_area.innerHTML = content_home3[7];
         //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
@@ -183,7 +183,7 @@ function draw(){
     };
 
     if(compassHeading >=319 && compassHeading <=329){
-        text_area.innerHTML = auxText[8];
+        text_area.innerHTML = content_home3[8];
         //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
