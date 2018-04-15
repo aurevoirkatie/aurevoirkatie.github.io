@@ -31,7 +31,7 @@ function setup() {
     loss_no_3.disconnect();
     loss_no_3.connect(filter);
     filter.amp(1.0, 20, 0)
-    timer = 1;
+    timer = 0;
 
   
 window.addEventListener('deviceorientation', function(e) {
@@ -46,7 +46,7 @@ function playbaqq() {
     var freq = filterFreq;
         filter.freq(freq);
         filter.res(i);
-        loss_no_3.play();
+        
         // if(original_no_3.isPlaying() == true){
         //     original_no_3.pause();
         //     };
@@ -55,7 +55,7 @@ function playbaqq() {
        
 function draw(){
 //counters
-    loss_no_3.pause();
+
     timer ++;
     var timeinseconds = timer/60
     console.log(timeinseconds);
@@ -71,7 +71,7 @@ function draw(){
             i++;
         } else {i = i - 1;
         };
-    }
+    };
 
  //text and sound triggers   
     if(compassHeading >= 355 || compassHeading <=5){
@@ -83,7 +83,8 @@ function draw(){
     };
 
     if(compassHeading >= 5 && compassHeading <=31){
-        playbaqq();  
+        playbaqq();
+        loss_no_3.play();  
     };
 
     if(compassHeading >= 31 && compassHeading <=41){
@@ -95,7 +96,8 @@ function draw(){
     };
 
     if(compassHeading >= 41 && compassHeading <=67){
-        playbaqq();  
+        playbaqq(); 
+        loss_no_3.play(); 
     };
 
     if(compassHeading >= 67 && compassHeading <=77){
@@ -107,7 +109,8 @@ function draw(){
     };
 
     if(compassHeading >= 77 && compassHeading <=103){
-        playbaqq();  
+        playbaqq();
+        loss_no_3.play();  
     };
 
     if(compassHeading >= 103 && compassHeading <=113){
@@ -119,7 +122,8 @@ function draw(){
     };
 
     if(compassHeading >= 113 && compassHeading <=139){
-        playbaqq();  
+        playbaqq(); 
+        loss_no_3.play(); 
     };
 
     if(compassHeading >= 139 && compassHeading <=149){
@@ -132,6 +136,7 @@ function draw(){
 
     if(compassHeading >= 149 && compassHeading <=175){
         playbaqq();  
+        loss_no_3.play();
     };
 
     if(compassHeading >= 175 && compassHeading <=185){
@@ -144,6 +149,7 @@ function draw(){
 
     if(compassHeading >= 185 && compassHeading <=211){
         playbaqq();  
+        loss_no_3.play();
     };
 
     if(compassHeading >= 211 && compassHeading <=221){
@@ -155,7 +161,8 @@ function draw(){
     };
 
     if(compassHeading >= 221 && compassHeading <=247){
-        playbaqq();  
+        playbaqq(); 
+        loss_no_3.play(); 
     };
 
     if(compassHeading >= 247 && compassHeading <=257){
@@ -167,7 +174,8 @@ function draw(){
     };
 
     if(compassHeading >= 257 && compassHeading <=283){
-        playbaqq();  
+        playbaqq(); 
+        loss_no_3.play(); 
     };
 
     if(compassHeading >= 283 && compassHeading <=288){
@@ -179,7 +187,8 @@ function draw(){
     };
 
     if(compassHeading >= 288 && compassHeading <=319){
-        playbaqq();  
+        playbaqq(); 
+        loss_no_3.play(); 
     };
 
     if(compassHeading >=319 && compassHeading <=329){
