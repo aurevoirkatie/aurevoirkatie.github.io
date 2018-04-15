@@ -12,7 +12,7 @@ function success() {
 function preload() {
  soundFormats('mp3', 'ogg');
     loss_no_3 = loadSound('assets/home_no_3_degradeOnly.mp3', success);
-    original_no_3 = loadSound('assets/pinetrail1.mp3');
+    ////original_no_3 = loadSound('assets/pinetrail1.mp3');
 };
 
 var text_area;
@@ -25,8 +25,8 @@ function setup() {
     canvas = createCanvas(window.innerWidth, window.innerHeight);
     loss_no_3.setVolume(1.0);
     loss_no_3.playMode('untilDone');
-    original_no_3.setVolume(1.0);
-    original_no_3.playMode('untilDone');
+    //original_no_3.setVolume(1.0);
+    //original_no_3.playMode('untilDone');
     content_home3 = ["2.0", "2.1", "2.2", "2.3", "2.4", "2.5", "2.6", "2.7", "2.8", "2.9"];
     text_area = document.getElementById("compass_content");
     i = .001;
@@ -51,8 +51,8 @@ function playbaqq() {
         filter.freq(freq);
         filter.res(i);
         loss_no_3.play();
-        if(original_no_3.isPlaying() == true){
-            original_no_3.pause();
+        if(//original_no_3.isPlaying() == true){
+            //original_no_3.pause();
             };
         text_area.innerHTML = "";
 }
@@ -79,7 +79,7 @@ function draw(){
  //text and sound triggers   
     if(compassHeading >= 355 || compassHeading <=5){
         text_area.innerHTML = auxText[0];
-        original_no_3.play();
+        //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             };
@@ -91,7 +91,7 @@ function draw(){
 
     if(compassHeading >= 31 && compassHeading <=41){
         text_area.innerHTML = auxText[1];
-        original_no_3.play();
+        //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             };
@@ -103,7 +103,7 @@ function draw(){
 
     if(compassHeading >= 67 && compassHeading <=77){
         text_area.innerHTML = auxText[2];
-        original_no_3.play();
+        //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             };
@@ -115,7 +115,7 @@ function draw(){
 
     if(compassHeading >= 103 && compassHeading <=113){
         text_area.innerHTML = auxText[3];
-        original_no_3.play();
+        //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             };
@@ -127,7 +127,7 @@ function draw(){
 
     if(compassHeading >= 139 && compassHeading <=149){
         text_area.innerHTML = auxText[4];
-        original_no_3.play();
+        //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             };
@@ -139,7 +139,7 @@ function draw(){
 
     if(compassHeading >= 175 && compassHeading <=185){
         text_area.innerHTML = auxText[4];
-        original_no_3.play();
+        //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             };
@@ -151,7 +151,7 @@ function draw(){
 
     if(compassHeading >= 211 && compassHeading <=221){
         text_area.innerHTML = auxText[5];
-        original_no_3.play();
+        //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             };
@@ -163,7 +163,7 @@ function draw(){
 
     if(compassHeading >= 247 && compassHeading <=257){
         text_area.innerHTML = auxText[6];
-        original_no_3.play();
+        //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             };
@@ -175,7 +175,7 @@ function draw(){
 
     if(compassHeading >= 283 && compassHeading <=288){
         text_area.innerHTML = auxText[7];
-        original_no_3.play();
+        //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             };
@@ -187,7 +187,7 @@ function draw(){
 
     if(compassHeading >=319 && compassHeading <=329){
         text_area.innerHTML = auxText[8];
-        original_no_3.play();
+        //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
             };
@@ -197,8 +197,8 @@ function draw(){
         loss_no_3.stop();
     };
 
-    if (timeinseconds >= original_no_3.duration()){
-        original_no_3.stop();
+    if (timeinseconds >= //original_no_3.duration()){
+        //original_no_3.stop();
     };
 };
 
