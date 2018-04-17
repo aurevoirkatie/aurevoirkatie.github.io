@@ -120,9 +120,11 @@ function draw(){
         text(content_home3[0], windowWidth/2, windowHeight/4);
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
+            if (state > 0){
             soundFile.play();
-            save(soundFile, 'rec1.wav');
-            };
+            state = 0;
+            }  
+        };
     };
 
     if(compassHeading >= 5 && compassHeading <=31){
