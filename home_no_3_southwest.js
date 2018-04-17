@@ -21,6 +21,7 @@ var content_home3;
 var compassHeading;
 var filterFreq;
 var timer;
+var timeinseconds;
 // var mic;
 // var recorder;
 // var soundFile;
@@ -53,7 +54,7 @@ function setup() {
     content_home3 = ["3.0 three", "3.1 Deciduous trees, vines and undergrowth \n cascade down the hill behind", "3.2 fourteen meshed windows \n that fall out of unpainted clapboard: \n two rooms on bottom and two on top. \n Rain drips louder than distant trucks passing", "3.3 who slice the landscape perpendicular", "3.4 to water systems’ homely stasis: (up, down).", "3.5 Bowed wooden exterior shrugs damply into earth.", "3.6 Mutely, it suggests \n a dozen daughters or sons, sleeves rolled, \n braiding hair and, in summer shade, \n shoveling (this was when", "3.7 wealth came from below.)\n It took one hundred passes \n for me to see the home. \n Walking here my head is usually down, \n searching for shiny stones.", "3.8  Quartz rock is abundant here: \n left behind by waters that bore it, left,", "3.9 upstream, northwest."];
 
     text_area = document.getElementById("compass_content");
-
+    timeinseconds = 0;
     i = .001;
     filterFreq = 100;
     filter = new p5.BandPass();
