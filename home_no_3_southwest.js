@@ -97,6 +97,9 @@ function setup() {
         fill(0);
         noStroke();
         rect(0, 0, windowWidth, 500);
+        if (timeinseconds >= pineTrail.duration()){
+        pineTrail.stop();
+    };
     };
 // function stopR(){
 //     recorder.stop();
@@ -138,7 +141,7 @@ function draw(){
         };
     };
 //format text
-    textAlign(CENTER);
+    textAlign(RIGHT);
 
  //text and sound triggers   
     if(compassHeading >= 355 || compassHeading <=5){
@@ -146,9 +149,15 @@ function draw(){
         fill(255);
         background(0);
         text(content_home3[0], windowWidth/2, windowHeight/4);
+        fill(0);
+        noStroke();
+        rect(0, 0, windowWidth, 500);
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
             threeZero.play();
+            if (timeinseconds >= threeZero.duration()){
+                threeZero.stop();
+     };
         };
     };
 
@@ -161,11 +170,17 @@ function draw(){
         fill(255);
         background(0);
         text(content_home3[1], windowWidth/2, windowHeight/4);
+        fill(0);
+        noStroke();
+        rect(0, 0, windowWidth, 500);
         //text_area.innerHTML = content_home3[1];
         //vocal.play();
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
             threeOne.play();
+            if (timeinseconds >= threeOne.duration()){
+                threeOne.stop();
+            };
         }
     };
 
@@ -197,6 +212,9 @@ function draw(){
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
             threeThree.play();
+        if (timeinseconds >= threeThree.duration()){
+         threeThree.stop();
+        };
         }
     };
 
@@ -209,6 +227,9 @@ function draw(){
         fill(255);
         background(0);
         text(content_home3[4], windowWidth/2, windowHeight/4);
+        fill(0);
+        noStroke();
+        rect(0, 0, windowWidth, 500);
         //text_area.innerHTML = content_home3[4];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
@@ -224,10 +245,16 @@ function draw(){
         fill(255);
         background(0);
         text(content_home3[5], windowWidth/2, windowHeight/4);
+        fill(0);
+        noStroke();
+        rect(0, 0, windowWidth, 500);
         //text_area.innerHTML = content_home3[4];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
             threeFive.play();
+            if (timeinseconds >= threeFive.duration()){
+            threeFive.stop();
+            };
         }
     };
 
@@ -270,10 +297,16 @@ function draw(){
         fill(255);
         background(0);
         text(content_home3[8], windowWidth/2, windowHeight/4);
+        fill(0);
+        noStroke();
+        rect(0, 0, windowWidth, 500);
         //text_area.innerHTML = content_home3[7];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
             threeEight.play();
+            if (timeinseconds >= threeEight.duration()){
+            threeEight.stop();
+            };
             };
     };
 
@@ -286,34 +319,18 @@ function draw(){
         fill(255);
         background(0);
         text(content_home3[9], windowWidth/2, windowHeight/4);
+        fill(0);
+        noStroke();
+        rect(0, 0, windowWidth, 500);
         //text_area.innerHTML = content_home3[8];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
             threeNine.play();
+            if (timeinseconds >= threeNine.duration()){
+            threeNine.stop();
+            };
             };
     };
 
-    if (timeinseconds >= pineTrail.duration()){
-        pineTrail.stop();
-    };
-
-    if (timeinseconds >= threeZero.duration()){
-         threeZero.stop();
-     };
-    if (timeinseconds >= threeOne.duration()){
-         threeOne.stop();
-     };
-    if (timeinseconds >= threeThree.duration()){
-         threeThree.stop();
-     };
-    if (timeinseconds >= threeFive.duration()){
-         threeFive.stop();
-     };
-    if (timeinseconds >= threeEight.duration()){
-         threeEight.stop();
-     };
-    if (timeinseconds >= threeNine.duration()){
-         threeNine.stop();
-     };
 };
 
