@@ -123,7 +123,7 @@ function draw(){
 //blue floor
     fill(0,0,255);
     noStroke();
-    rect(0, 800, windowWidth, 500);
+    rect(0, 800, windowWidth, 250);
 
 //counters
     timer ++;
@@ -142,7 +142,7 @@ function draw(){
         };
     };
 //format text
-    textAlign(RIGHT);
+    textAlign(LEFT);
 
  //text and sound triggers   
     if(compassHeading >= 355 || compassHeading <=5){
@@ -150,15 +150,12 @@ function draw(){
         fill(255);
         background(0);
         text(content_home3[0], windowWidth/2, windowHeight/4);
-        fill(0);
+        fill(0,0,255);
         noStroke();
-        rect(0, 0, windowWidth, 500);
+        rect(0, 800, windowWidth, 250);
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
             threeZero.play();
-            if (timeinseconds >= threeZero.duration()){
-                threeZero.stop();
-     };
         };
     };
 
@@ -171,17 +168,14 @@ function draw(){
         fill(255);
         background(0);
         text(content_home3[1], windowWidth/2, windowHeight/4);
-        fill(0);
+        fill(0,0,255);
         noStroke();
-        rect(0, 0, windowWidth, 500);
+        rect(0, 800, windowWidth, 250);
         //text_area.innerHTML = content_home3[1];
         //vocal.play();
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
             threeOne.play();
-            if (timeinseconds >= threeOne.duration()){
-                threeOne.stop();
-            };
         }
     };
 
@@ -194,6 +188,9 @@ function draw(){
         fill(255);
         background(0);
         text(content_home3[2], windowWidth/2, windowHeight/4);
+        fill(0,0,255);
+        noStroke();
+        rect(0, 800, windowWidth, 250);
         //text_area.innerHTML = content_home3[2];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
@@ -209,13 +206,13 @@ function draw(){
         fill(255);
         background(0);
         text(content_home3[3], windowWidth/2, windowHeight/4);
+        fill(0,0,255);
+        noStroke();
+        rect(0, 800, windowWidth, 250);
         //text_area.innerHTML = content_home3[3];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
             threeThree.play();
-        if (timeinseconds >= threeThree.duration()){
-         threeThree.stop();
-        };
         }
     };
 
@@ -228,9 +225,9 @@ function draw(){
         fill(255);
         background(0);
         text(content_home3[4], windowWidth/2, windowHeight/4);
-        fill(0);
+        fill(0,0,255);
         noStroke();
-        rect(0, 0, windowWidth, 500);
+        rect(0, 800, windowWidth, 250);
         //text_area.innerHTML = content_home3[4];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
@@ -246,16 +243,13 @@ function draw(){
         fill(255);
         background(0);
         text(content_home3[5], windowWidth/2, windowHeight/4);
-        fill(0);
+        fill(0,0,255);
         noStroke();
-        rect(0, 0, windowWidth, 500);
+        rect(0, 800, windowWidth, 250);
         //text_area.innerHTML = content_home3[4];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
             threeFive.play();
-            if (timeinseconds >= threeFive.duration()){
-            threeFive.stop();
-            };
         }
     };
 
@@ -268,6 +262,9 @@ function draw(){
         fill(255);
         background(0);
         text(content_home3[6], windowWidth/2, windowHeight/4);
+        fill(0,0,255);
+        noStroke();
+        rect(0, 800, windowWidth, 250);
         //text_area.innerHTML = content_home3[5];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
@@ -298,17 +295,14 @@ function draw(){
         fill(255);
         background(0);
         text(content_home3[8], windowWidth/2, windowHeight/4);
-        fill(0);
+        fill(0,0,255);
         noStroke();
-        rect(0, 0, windowWidth, 500);
+        rect(0, 800, windowWidth, 250);
         //text_area.innerHTML = content_home3[7];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
             threeEight.play();
-            if (timeinseconds >= threeEight.duration()){
-            threeEight.stop();
-            };
-            };
+        };
     };
 
     if(compassHeading >= 288 && compassHeading <=319){
@@ -320,17 +314,14 @@ function draw(){
         fill(255);
         background(0);
         text(content_home3[9], windowWidth/2, windowHeight/4);
-        fill(0);
+        fill(0,0,255);
         noStroke();
-        rect(0, 0, windowWidth, 500);
+        rect(0, 800, windowWidth, 250);
         //text_area.innerHTML = content_home3[8];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
             threeNine.play();
-            if (timeinseconds >= threeNine.duration()){
-            threeNine.stop();
-            };
-            };
+        };
     };
 
 };
