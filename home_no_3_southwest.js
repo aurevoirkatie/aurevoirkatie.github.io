@@ -16,6 +16,10 @@ var content_home3;
 var compassHeading;
 var filterFreq;
 var timer;
+var mic;
+var recorder;
+var soundFile;
+var state;
 // var contentIndex;
 // var printedText;
 // var textTimer;
@@ -31,28 +35,46 @@ function setup() {
     loss_no_3.playMode('untilDone');
     original_no_3.setVolume(1.0);
     original_no_3.playMode('untilDone');
-    content_home3 = ["3.0 three", "3.1 when the highway was distant enough", "3.2 for drips to ring louder than", "3.3 passing trucks who sliced the landscape", "3.4 perpendicular in a Cartesian split", "3.5 to the water systems whose homely stasis", "3.6 ran up and down", "3.7 up and down", "3.8 quartz rock is often left abandoned by whatever waters bore it upstream", "3.9 northeast"];
+    content_home3 = ["3.0 three", "3.1 when the highway was distant enough", "3.2 for drips to ring louder than", "3.3 passing trucks who sliced the landscape", "3.4 perpendicular in a Cartesian split", "3.5 to the water systems whose homely stasis", "3.6 ran up and down", "3.7 up and down", "3.8 quartz rock is often left abandoned by whatever waters bore it. upstream,", "3.9 northeast"];
 
     text_area = document.getElementById("compass_content");
+
     i = .001;
     filterFreq = 100;
     filter = new p5.BandPass();
     loss_no_3.disconnect();
     loss_no_3.connect(filter);
     filter.amp(1.0, 20, 0)
+
     timer = 0;
     textFont("courier", 25);
 
+//recording setup
+    state = 0;
+    mic = new p5.AudioIn();
+    mic.start();
+    recorder = new p5.SoundRecorder();
+    recorder.setInput(mic);
+    soundFile = new p5.SoundFile();
+
+    function mouseIsPressed() {
+        if (state === 0 && mic.enabled) {
+            recorder.record(soundFile);
+            state++;
+        } else if (state === 1) {
+            recorder.stop();
+            state = 0;
+        }
   
-window.addEventListener('deviceorientation', function(e) {
+    window.addEventListener('deviceorientation', function(e) {
     var alpha = e.alpha;
         if(e.webkitCompassHeading){
             compassHeading = e.webkitCompassHeading;
         } else compassHeading = 360 - alpha;
-    });
-};
+        });
+    };
 
-function playbaqq() {
+    function playbaqq() {
     var freq = filterFreq;
         filter.freq(freq);
         filter.res(i);
@@ -67,9 +89,10 @@ function playbaqq() {
 
        
 function draw(){
-fill(0,0,255);
-noStroke();
-rect(0, 800, windowWidth, 500);
+//blue floor
+    fill(0,0,255);
+    noStroke();
+    rect(0, 800, windowWidth, 500);
 
 //counters
 
@@ -100,7 +123,8 @@ rect(0, 800, windowWidth, 500);
         text(content_home3[0], windowWidth/2, windowHeight/4);
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
-            original_no_3.play();
+            soundFile.play();
+            save(soundFile, 'rec1.wav');
             };
     };
 
@@ -117,6 +141,8 @@ rect(0, 800, windowWidth, 500);
         //original_no_3.play();
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
+            soundFile.play();
+            save(soundFile, 'rec1.wav');
             };
     };
 
@@ -132,7 +158,8 @@ rect(0, 800, windowWidth, 500);
         //text_area.innerHTML = content_home3[2];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
-            original_no_3.play();
+            soundFile.play();
+            save(soundFile, 'rec1.wav');
             };
     };
 
@@ -148,6 +175,8 @@ rect(0, 800, windowWidth, 500);
         //text_area.innerHTML = content_home3[3];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
+            soundFile.play();
+            save(soundFile, 'rec1.wav');
             };
     };
 
@@ -163,7 +192,8 @@ rect(0, 800, windowWidth, 500);
         //text_area.innerHTML = content_home3[4];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
-            original_no_3.play();
+            soundFile.play();
+            save(soundFile, 'rec1.wav');
             };
     };
 
@@ -179,6 +209,8 @@ rect(0, 800, windowWidth, 500);
         //text_area.innerHTML = content_home3[4];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
+            soundFile.play();
+            save(soundFile, 'rec1.wav');
             };
     };
 
@@ -194,7 +226,8 @@ rect(0, 800, windowWidth, 500);
         //text_area.innerHTML = content_home3[5];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
-            original_no_3.play();
+            soundFile.play();
+            save(soundFile, 'rec1.wav');
             };
     };
 
@@ -210,6 +243,8 @@ rect(0, 800, windowWidth, 500);
         //text_area.innerHTML = content_home3[6];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
+            soundFile.play();
+            save(soundFile, 'rec1.wav');
             };
     };
 
@@ -225,7 +260,8 @@ rect(0, 800, windowWidth, 500);
         //text_area.innerHTML = content_home3[7];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
-            original_no_3.play();
+            soundFile.play();
+            save(soundFile, 'rec1.wav');
             };
     };
 
@@ -241,6 +277,8 @@ rect(0, 800, windowWidth, 500);
         //text_area.innerHTML = content_home3[8];
         if(loss_no_3.isPlaying() == true){
             loss_no_3.pause();
+            soundFile.play();
+            save(soundFile, 'rec1.wav');
             };
     };
 
