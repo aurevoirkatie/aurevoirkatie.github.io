@@ -35,7 +35,7 @@ function setup() {
     loss_no_3.playMode('untilDone');
     original_no_3.setVolume(1.0);
     original_no_3.playMode('untilDone');
-    content_home3 = ["3.0 three", "3.1 when the highway was distant enough", "3.2 for drips to ring louder than", "3.3 passing trucks who sliced the landscape", "3.4 perpendicular in a Cartesian split", "3.5 to the water systems whose homely stasis", "3.6 ran up and down", "3.7 up and down", "3.8 quartz rock is often left abandoned by whatever waters bore it. upstream,", "3.9 northeast"];
+    content_home3 = ["3.0 three", "3.1 Deciduous trees, vines and undergrowth cascade down the hill behind", "3.2 fourteen meshed windows that fall out of unpainted clapboard: two rooms on bottom and two on top. Rain drips louder than distant trucks passing", "3.3 who slice the landscape perpendicular", "3.4 to water systems’ homely stasis: (up, down).", "3.5 Bowed wooden exterior shrugs damply into earth.", "3.6 Mutely, it suggests a dozen daughters and sons, sleeves rolled, braiding hair and, in summer shade, shoveling (this was when", "3.7 wealth came from below.) It took one hundred passes for me to see the home. Walking here my head is usually down, searching for shiny stones.", "3.8  Quartz rock is abundant here: left behind by waters that bore it, left,", "3.9 upstream, northwest."];
 
     text_area = document.getElementById("compass_content");
 
