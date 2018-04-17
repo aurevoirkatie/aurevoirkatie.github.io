@@ -64,7 +64,7 @@ function setup() {
         } else if (state === 1) {
             recorder.stop();
             state = 0;
-        }
+        };
   
     window.addEventListener('deviceorientation', function(e) {
     var alpha = e.alpha;
@@ -86,6 +86,7 @@ function setup() {
         noStroke();
         rect(0, 0, windowWidth, 500);
     };
+};
 
        
 function draw(){
