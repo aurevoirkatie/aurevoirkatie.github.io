@@ -43,13 +43,13 @@ function setup() {
     threeOne.setVolume(1.0);
     threeOne.playMode('untilDone');
     threeThree.setVolume(1.0);
-    threeThree.playMode('sustain');
+    threeThree.playMode('untilDone');
     threeFive.setVolume(1.0);
     threeFive.playMode('untilDone');
     threeEight.setVolume(1.0);
-    threeEight.playMode('sustain');
+    threeEight.playMode('untilDone');
     threeNine.setVolume(1.0);
-    threeNine.playMode('sustain');
+    threeNine.playMode('untilDone');
     content_home3 = ["3.0 three", "3.1 Deciduous trees, vines and undergrowth cascade down the hill behind", "3.2 fourteen meshed windows that fall out of unpainted clapboard: two rooms on bottom and two on top. Rain drips louder than distant trucks passing", "3.3 who slice the landscape perpendicular", "3.4 to water systems’ homely stasis: (up, down).", "3.5 Bowed wooden exterior shrugs damply into earth.", "3.6 Mutely, it suggests a dozen daughters and sons, sleeves rolled, braiding hair and, in summer shade, shoveling (this was when", "3.7 wealth came from below.) It took one hundred passes for me to see the home. Walking here my head is usually down, searching for shiny stones.", "3.8  Quartz rock is abundant here: left behind by waters that bore it, left,", "3.9 upstream, northwest."];
 
     text_area = document.getElementById("compass_content");
