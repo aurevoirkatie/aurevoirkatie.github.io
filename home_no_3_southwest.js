@@ -87,6 +87,9 @@ function draw(){
 //recorder
     function mouseIsPressed() {
         if (state === 0 && mic.enabled) {
+            if (loss_no_3.isPlaying() == true){
+                loss_no_3.pause();
+            }
             recorder.record(soundFile, 5, stopR());
             state++;
         } 
