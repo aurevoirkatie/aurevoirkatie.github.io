@@ -123,7 +123,7 @@ function draw(){
 //blue floor
     fill(0,0,255);
     noStroke();
-    rect(0, 800, windowWidth, 250);
+    rect(0, 1050, windowWidth, 250);
 
 //counters
     timer ++;
@@ -149,10 +149,10 @@ function draw(){
         //text_area.innerHTML = content_home3[0];
         fill(255);
         background(0);
-        text(content_home3[0], windowWidth/2, windowHeight/4);
+        text(content_home3[0], windowWidth/4, windowHeight/4);
         fill(0,0,255);
         noStroke();
-        rect(0, 800, windowWidth, 250);
+        rect(0, 1050, windowWidth, 250);
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
             threeZero.play();
@@ -167,10 +167,10 @@ function draw(){
     if(compassHeading >= 31 && compassHeading <=41){
         fill(255);
         background(0);
-        text(content_home3[1], windowWidth/2, windowHeight/4);
+        text(content_home3[1], windowWidth/4, windowHeight/4);
         fill(0,0,255);
         noStroke();
-        rect(0, 800, windowWidth, 250);
+        rect(0, 1050, windowWidth, 250);
         //text_area.innerHTML = content_home3[1];
         //vocal.play();
         if(pineTrail.isPlaying() == true){
@@ -187,10 +187,10 @@ function draw(){
     if(compassHeading >= 67 && compassHeading <=77){
         fill(255);
         background(0);
-        text(content_home3[2], windowWidth/2, windowHeight/4);
+        text(content_home3[2], windowWidth/4, windowHeight/4);
         fill(0,0,255);
         noStroke();
-        rect(0, 800, windowWidth, 250);
+        rect(0, 1050, windowWidth, 250);
         //text_area.innerHTML = content_home3[2];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
@@ -205,10 +205,10 @@ function draw(){
     if(compassHeading >= 103 && compassHeading <=113){
         fill(255);
         background(0);
-        text(content_home3[3], windowWidth/2, windowHeight/4);
+        text(content_home3[3], windowWidth/4, windowHeight/4);
         fill(0,0,255);
         noStroke();
-        rect(0, 800, windowWidth, 250);
+        rect(0, 1050, windowWidth, 250);
         //text_area.innerHTML = content_home3[3];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
@@ -224,10 +224,10 @@ function draw(){
     if(compassHeading >= 139 && compassHeading <=149){
         fill(255);
         background(0);
-        text(content_home3[4], windowWidth/2, windowHeight/4);
+        text(content_home3[4], windowWidth/4, windowHeight/4);
         fill(0,0,255);
         noStroke();
-        rect(0, 800, windowWidth, 250);
+        rect(0, 1050, windowWidth, 250);
         //text_area.innerHTML = content_home3[4];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
@@ -242,10 +242,10 @@ function draw(){
     if(compassHeading >= 175 && compassHeading <=185){
         fill(255);
         background(0);
-        text(content_home3[5], windowWidth/2, windowHeight/4);
+        text(content_home3[5], windowWidth/4, windowHeight/4);
         fill(0,0,255);
         noStroke();
-        rect(0, 800, windowWidth, 250);
+        rect(0, 1050, windowWidth, 250);
         //text_area.innerHTML = content_home3[4];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
@@ -261,10 +261,10 @@ function draw(){
     if(compassHeading >= 211 && compassHeading <=221){
         fill(255);
         background(0);
-        text(content_home3[6], windowWidth/2, windowHeight/4);
+        text(content_home3[6], windowWidth/4, windowHeight/4);
         fill(0,0,255);
         noStroke();
-        rect(0, 800, windowWidth, 250);
+        rect(0, 1050, windowWidth, 250);
         //text_area.innerHTML = content_home3[5];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
@@ -279,7 +279,7 @@ function draw(){
     if(compassHeading >= 247 && compassHeading <=257){
         fill(255);
         background(0);
-        text(content_home3[7], windowWidth/2, windowHeight/4);
+        text(content_home3[7], windowWidth/4, windowHeight/4);
         //text_area.innerHTML = content_home3[6];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
@@ -294,10 +294,10 @@ function draw(){
     if(compassHeading >= 283 && compassHeading <=288){
         fill(255);
         background(0);
-        text(content_home3[8], windowWidth/2, windowHeight/4);
+        text(content_home3[8], windowWidth/4, windowHeight/4);
         fill(0,0,255);
         noStroke();
-        rect(0, 800, windowWidth, 250);
+        rect(0, 1050, windowWidth, 250);
         //text_area.innerHTML = content_home3[7];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
@@ -313,10 +313,10 @@ function draw(){
     if(compassHeading >=319 && compassHeading <=329){
         fill(255);
         background(0);
-        text(content_home3[9], windowWidth/2, windowHeight/4);
+        text(content_home3[9], windowWidth/4, windowHeight/4);
         fill(0,0,255);
         noStroke();
-        rect(0, 800, windowWidth, 250);
+        rect(0, 1050, windowWidth, 250);
         //text_area.innerHTML = content_home3[8];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
