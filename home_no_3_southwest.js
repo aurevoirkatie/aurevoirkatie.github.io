@@ -79,6 +79,7 @@ function setup() {
     };
 function stopR(){
     recorder.stop();
+    saveSound(soundFile,'rec1.wav');
 }
 
        
