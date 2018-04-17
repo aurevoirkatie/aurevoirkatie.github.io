@@ -77,13 +77,16 @@ function setup() {
         noStroke();
         rect(0, 0, windowWidth, 500);
     };
+function stopR(){
+    recorder.stop();
+}
 
        
 function draw(){
 //recorder
     function mouseIsPressed() {
         if (state === 0 && mic.enabled) {
-            recorder.record(soundFile, 5, recorder.stop(););
+            recorder.record(soundFile, 5, stopR());
             state++;
         } 
         };
