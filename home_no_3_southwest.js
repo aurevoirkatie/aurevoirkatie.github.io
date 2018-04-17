@@ -7,8 +7,13 @@ function success() {
 
 function preload() {
  soundFormats('mp3', 'ogg');
-    loss_no_3 = loadSound('assets/home_no_3_degradeOnly.mp3', success);
-    original_no_3 = loadSound('assets/vocal.mp3', success);
+    pineTrail = loadSound('assets/pinetrail.mp3', success);
+    threeZero = loadSound('assets/0three-zero.mp3', success);
+    threeOne = loadSound('assets/0three-one.mp3', success);
+    threeThree = loadSound('assets/0three-three.mp3', success);
+    threeFive = loadSound('assets/0three-five.mp3', success);
+    threeEight = loadSound('assets/0three-eight.mp3', success);
+    threeNine = loadSound('assets/0three-nine.mp3', success);
 };
 
 var text_area;
@@ -31,10 +36,20 @@ var timer;
 
 function setup() {
     canvas = createCanvas(windowWidth, windowHeight);
-    loss_no_3.setVolume(1.0);
-    loss_no_3.playMode('untilDone');
-    original_no_3.setVolume(1.0);
-    original_no_3.playMode('untilDone');
+    pineTrail.setVolume(1.0);
+    pineTrail.playMode('untilDone');
+    threeZero.setVolume(1.0);
+    threeZero.playMode('untilDone');
+    threeOne.setVolume(1.0);
+    threeOne.playMode('untilDone');
+    threeThree.setVolume(1.0);
+    threeThree.playMode('sustain');
+    threeFive.setVolume(1.0);
+    threeFive.playMode('untilDone');
+    threeEight.setVolume(1.0);
+    threeEight.playMode('sustain');
+    threeNine.setVolume(1.0);
+    threeNine.playMode('sustain');
     content_home3 = ["3.0 three", "3.1 Deciduous trees, vines and undergrowth cascade down the hill behind", "3.2 fourteen meshed windows that fall out of unpainted clapboard: two rooms on bottom and two on top. Rain drips louder than distant trucks passing", "3.3 who slice the landscape perpendicular", "3.4 to water systems’ homely stasis: (up, down).", "3.5 Bowed wooden exterior shrugs damply into earth.", "3.6 Mutely, it suggests a dozen daughters and sons, sleeves rolled, braiding hair and, in summer shade, shoveling (this was when", "3.7 wealth came from below.) It took one hundred passes for me to see the home. Walking here my head is usually down, searching for shiny stones.", "3.8  Quartz rock is abundant here: left behind by waters that bore it, left,", "3.9 upstream, northwest."];
 
     text_area = document.getElementById("compass_content");
@@ -42,8 +57,8 @@ function setup() {
     i = .001;
     filterFreq = 100;
     filter = new p5.BandPass();
-    loss_no_3.disconnect();
-    loss_no_3.connect(filter);
+    pineTrail.disconnect();
+    pineTrail.connect(filter);
     filter.amp(1.0, 20, 0)
 
     timer = 0;
@@ -69,8 +84,14 @@ function setup() {
     var freq = filterFreq;
         filter.freq(freq);
         filter.res(i);
-        if(original_no_3.isPlaying() == true){
-             original_no_3.pause();
+        if(threeZero.isPlaying() == true){
+             threeZero.pause();
+             };
+        if(threeOne.isPlaying() == true){
+             threeOne.pause();
+             };
+        if(threeFive.isPlaying() == true){
+             threeFive.pause();
              };
         text_area.innerHTML = "";
         fill(0);
@@ -87,8 +108,8 @@ function draw(){
 // //recorder
 //     function mouseIsPressed() {
 //         if (state === 0 && mic.enabled) {
-//             if (loss_no_3.isPlaying() == true){
-//                 loss_no_3.pause();
+//             if (pineTrail.isPlaying() == true){
+//                 pineTrail.pause();
 //             }
 //             recorder.record(soundFile, 5, stopR());
 //             state++;
@@ -125,15 +146,15 @@ function draw(){
         fill(255);
         background(0);
         text(content_home3[0], windowWidth/2, windowHeight/4);
-        if(loss_no_3.isPlaying() == true){
-            loss_no_3.pause();
-            original_no_3.play();
+        if(pineTrail.isPlaying() == true){
+            pineTrail.pause();
+            threeZero.play();
         };
     };
 
     if(compassHeading >= 5 && compassHeading <=31){
         playbaqq();
-        loss_no_3.play();  
+        pineTrail.play();  
     };
 
     if(compassHeading >= 31 && compassHeading <=41){
@@ -141,16 +162,16 @@ function draw(){
         background(0);
         text(content_home3[1], windowWidth/2, windowHeight/4);
         //text_area.innerHTML = content_home3[1];
-        //original_no_3.play();
-        if(loss_no_3.isPlaying() == true){
-            loss_no_3.pause();
-            original_no_3.play();
+        //vocal.play();
+        if(pineTrail.isPlaying() == true){
+            pineTrail.pause();
+            threeOne.play();
         }
     };
 
     if(compassHeading >= 41 && compassHeading <=67){
         playbaqq(); 
-        loss_no_3.play(); 
+        pineTrail.play(); 
     };
 
     if(compassHeading >= 67 && compassHeading <=77){
@@ -158,14 +179,14 @@ function draw(){
         background(0);
         text(content_home3[2], windowWidth/2, windowHeight/4);
         //text_area.innerHTML = content_home3[2];
-        if(loss_no_3.isPlaying() == true){
-            loss_no_3.pause();
+        if(pineTrail.isPlaying() == true){
+            pineTrail.pause();
         }
     };
 
     if(compassHeading >= 77 && compassHeading <=103){
         playbaqq();
-        loss_no_3.play();  
+        pineTrail.play();  
     };
 
     if(compassHeading >= 103 && compassHeading <=113){
@@ -173,15 +194,15 @@ function draw(){
         background(0);
         text(content_home3[3], windowWidth/2, windowHeight/4);
         //text_area.innerHTML = content_home3[3];
-        if(loss_no_3.isPlaying() == true){
-            loss_no_3.pause();
-            original_no_3.play();
+        if(pineTrail.isPlaying() == true){
+            pineTrail.pause();
+            threeThree.play();
         }
     };
 
     if(compassHeading >= 113 && compassHeading <=139){
         playbaqq(); 
-        loss_no_3.play(); 
+        pineTrail.play(); 
     };
 
     if(compassHeading >= 139 && compassHeading <=149){
@@ -189,14 +210,14 @@ function draw(){
         background(0);
         text(content_home3[4], windowWidth/2, windowHeight/4);
         //text_area.innerHTML = content_home3[4];
-        if(loss_no_3.isPlaying() == true){
-            loss_no_3.pause();
+        if(pineTrail.isPlaying() == true){
+            pineTrail.pause();
         }
     };
 
     if(compassHeading >= 149 && compassHeading <=175){
         playbaqq();  
-        loss_no_3.play();
+        pineTrail.play();
     };
 
     if(compassHeading >= 175 && compassHeading <=185){
@@ -204,15 +225,15 @@ function draw(){
         background(0);
         text(content_home3[5], windowWidth/2, windowHeight/4);
         //text_area.innerHTML = content_home3[4];
-        if(loss_no_3.isPlaying() == true){
-            loss_no_3.pause();
-            original_no_3.play();
+        if(pineTrail.isPlaying() == true){
+            pineTrail.pause();
+            threeFive.play();
         }
     };
 
     if(compassHeading >= 185 && compassHeading <=211){
         playbaqq();  
-        loss_no_3.play();
+        pineTrail.play();
     };
 
     if(compassHeading >= 211 && compassHeading <=221){
@@ -220,14 +241,14 @@ function draw(){
         background(0);
         text(content_home3[6], windowWidth/2, windowHeight/4);
         //text_area.innerHTML = content_home3[5];
-        if(loss_no_3.isPlaying() == true){
-            loss_no_3.pause();
+        if(pineTrail.isPlaying() == true){
+            pineTrail.pause();
         }
     };
 
     if(compassHeading >= 221 && compassHeading <=247){
         playbaqq(); 
-        loss_no_3.play(); 
+        pineTrail.play(); 
     };
 
     if(compassHeading >= 247 && compassHeading <=257){
@@ -235,15 +256,14 @@ function draw(){
         background(0);
         text(content_home3[7], windowWidth/2, windowHeight/4);
         //text_area.innerHTML = content_home3[6];
-        if(loss_no_3.isPlaying() == true){
-            loss_no_3.pause();
-            original_no_3.play();
+        if(pineTrail.isPlaying() == true){
+            pineTrail.pause();
         };
     };
 
     if(compassHeading >= 257 && compassHeading <=283){
         playbaqq(); 
-        loss_no_3.play(); 
+        pineTrail.play(); 
     };
 
     if(compassHeading >= 283 && compassHeading <=288){
@@ -251,15 +271,15 @@ function draw(){
         background(0);
         text(content_home3[8], windowWidth/2, windowHeight/4);
         //text_area.innerHTML = content_home3[7];
-        if(loss_no_3.isPlaying() == true){
-            loss_no_3.pause();
-            original_no_3.play();
+        if(pineTrail.isPlaying() == true){
+            pineTrail.pause();
+            threeEight.play();
             };
     };
 
     if(compassHeading >= 288 && compassHeading <=319){
         playbaqq(); 
-        loss_no_3.play(); 
+        pineTrail.play(); 
     };
 
     if(compassHeading >=319 && compassHeading <=329){
@@ -267,18 +287,33 @@ function draw(){
         background(0);
         text(content_home3[9], windowWidth/2, windowHeight/4);
         //text_area.innerHTML = content_home3[8];
-        if(loss_no_3.isPlaying() == true){
-            loss_no_3.pause();
-            
+        if(pineTrail.isPlaying() == true){
+            pineTrail.pause();
+            threeNine.play();
             };
     };
 
-    if (timeinseconds >= loss_no_3.duration()){
-        loss_no_3.stop();
+    if (timeinseconds >= pineTrail.duration()){
+        pineTrail.stop();
     };
 
-    if (timeinseconds >= original_no_3.duration()){
-         original_no_3.stop();
+    if (timeinseconds >= threeZero.duration()){
+         threeZero.stop();
+     };
+    if (timeinseconds >= threeOne.duration()){
+         threeOne.stop();
+     };
+    if (timeinseconds >= threeThree.duration()){
+         threeThree.stop();
+     };
+    if (timeinseconds >= threeFive.duration()){
+         threeFive.stop();
+     };
+    if (timeinseconds >= threeEight.duration()){
+         threeEight.stop();
+     };
+    if (timeinseconds >= threeNine.duration()){
+         threeNine.stop();
      };
 };
 
