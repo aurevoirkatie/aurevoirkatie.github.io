@@ -56,15 +56,6 @@ function setup() {
     recorder = new p5.SoundRecorder();
     recorder.setInput(mic);
     soundFile = new p5.SoundFile();
-
-    function mouseIsPressed() {
-        if (state === 0 && mic.enabled) {
-            recorder.record(soundFile);
-            state++;
-        } else if (state === 1) {
-            recorder.stop();
-            state = 0;
-        };
   
     window.addEventListener('deviceorientation', function(e) {
     var alpha = e.alpha;
@@ -90,16 +81,24 @@ function setup() {
 
        
 function draw(){
+//recorder
+    function mouseIsPressed() {
+        if (state === 0 && mic.enabled) {
+            recorder.record(soundFile);
+            state++;
+        } else if (state === 1) {
+            recorder.stop();
+            state = 0;
+        };
+
 //blue floor
     fill(0,0,255);
     noStroke();
     rect(0, 800, windowWidth, 500);
 
 //counters
-
     timer ++;
     var timeinseconds = timer/60
-    //console.log(timeinseconds);
 
 
     if (filterFreq <= 10000){
