@@ -83,12 +83,9 @@ function draw(){
 //recorder
     function mouseIsPressed() {
         if (state === 0 && mic.enabled) {
-            recorder.record(soundFile);
+            recorder.record(soundFile, 5, recorder.stop(););
             state++;
-        } else if (state === 1) {
-            recorder.stop();
-            state = 0;
-        }
+        } 
         };
 
 //blue floor
