@@ -7,7 +7,7 @@ function success() {
 
 function preload() {
  soundFormats('mp3', 'ogg');
-    pineTrail = loadSound('assets/creak.mp3', success);
+    pineTrail = loadSound('assets/creak1.mp3', success);
     threeZero = loadSound('assets/0three-zero.mp3', success);
     threeOne = loadSound('assets/0three-one.mp3', success);
     threeThree = loadSound('assets/0three-three.mp3', success);
