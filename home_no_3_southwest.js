@@ -7,13 +7,14 @@ function success() {
 
 function preload() {
  soundFormats('mp3', 'ogg');
-    pineTrail = loadSound('assets/home_no_3.mp3', success);
+    pineTrail = loadSound('assets/creak.mp3', success);
     threeZero = loadSound('assets/0three-zero.mp3', success);
-    threeOne = loadSound('assets/0three-one.mp3', success);
-    threeThree = loadSound('assets/0three-three.mp3', success);
-    threeFive = loadSound('assets/0three-five.mp3', success);
+    threeOne = loadSound('assets/three-one.mp3', success);
+    threeThree = loadSound('assets/three-three.mp3', success);
+    threeFive = loadSound('assets/three-five.mp3', success);
     threeEight = loadSound('assets/0three-eight.mp3', success);
     threeNine = loadSound('assets/0three-nine.mp3', success);
+    vocal = loadSound('assets/vocal.mp3', success);
 };
 
 var text_area;
@@ -88,6 +89,9 @@ function setup() {
         if(threeZero.isPlaying() == true){
              threeZero.pause();
              };
+        if(threeNine.isPlaying() == true){
+             threeNine.pause();
+             };
         if(threeOne.isPlaying() == true){
              threeOne.pause();
              };
@@ -98,8 +102,8 @@ function setup() {
         fill(0);
         noStroke();
         rect(0, 0, windowWidth, 500);
-        if (timeinseconds >= pineTrail.duration()){
-        pineTrail.stop();
+        // if (timeinseconds >= pineTrail.duration()){
+        // pineTrail.stop();
     };
     };
 // function stopR(){
@@ -123,19 +127,19 @@ function draw(){
 //blue floor
     fill(0,0,255);
     noStroke();
-    rect(0, 1050, windowWidth, 250);
+    rect(0, 1050, windowWidth, 275);
 
 //counters
     timer ++;
     var timeinseconds = timer/60
 
 
-    if (filterFreq <= 10000){
+    if (filterFreq <= 8000){
         filterFreq = filterFreq + 1.6;
     } else {filterFreq = filterFreq - 1.6
     };
 
-    if (timeinseconds == 180){
+    if (timeinseconds == 240){
         if (i <= 1000){
             i++;
         } else {i = i - 1;
@@ -152,7 +156,7 @@ function draw(){
         text(content_home3[0], windowWidth/4, windowHeight/4);
         fill(0,0,255);
         noStroke();
-        rect(0, 1050, windowWidth, 250);
+        rect(0, 1050, windowWidth, 275);
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
             threeZero.play();
@@ -170,7 +174,7 @@ function draw(){
         text(content_home3[1], windowWidth/4, windowHeight/4);
         fill(0,0,255);
         noStroke();
-        rect(0, 1050, windowWidth, 250);
+        rect(0, 1050, windowWidth, 275);
         //text_area.innerHTML = content_home3[1];
         //vocal.play();
         if(pineTrail.isPlaying() == true){
@@ -190,7 +194,7 @@ function draw(){
         text(content_home3[2], windowWidth/4, windowHeight/4);
         fill(0,0,255);
         noStroke();
-        rect(0, 1050, windowWidth, 250);
+        rect(0, 1050, windowWidth, 275);
         //text_area.innerHTML = content_home3[2];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
@@ -208,7 +212,7 @@ function draw(){
         text(content_home3[3], windowWidth/4, windowHeight/4);
         fill(0,0,255);
         noStroke();
-        rect(0, 1050, windowWidth, 250);
+        rect(0, 1050, windowWidth, 275);
         //text_area.innerHTML = content_home3[3];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
@@ -227,7 +231,7 @@ function draw(){
         text(content_home3[4], windowWidth/4, windowHeight/4);
         fill(0,0,255);
         noStroke();
-        rect(0, 1050, windowWidth, 250);
+        rect(0, 1050, windowWidth, 275);
         //text_area.innerHTML = content_home3[4];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
@@ -245,7 +249,7 @@ function draw(){
         text(content_home3[5], windowWidth/4, windowHeight/4);
         fill(0,0,255);
         noStroke();
-        rect(0, 1050, windowWidth, 250);
+        rect(0, 1050, windowWidth, 275);
         //text_area.innerHTML = content_home3[4];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
@@ -264,7 +268,7 @@ function draw(){
         text(content_home3[6], windowWidth/4, windowHeight/4);
         fill(0,0,255);
         noStroke();
-        rect(0, 1050, windowWidth, 250);
+        rect(0, 1050, windowWidth, 275);
         //text_area.innerHTML = content_home3[5];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
@@ -297,7 +301,7 @@ function draw(){
         text(content_home3[8], windowWidth/4, windowHeight/4);
         fill(0,0,255);
         noStroke();
-        rect(0, 1050, windowWidth, 250);
+        rect(0, 1050, windowWidth, 275);
         //text_area.innerHTML = content_home3[7];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
@@ -316,7 +320,7 @@ function draw(){
         text(content_home3[9], windowWidth/4, windowHeight/4);
         fill(0,0,255);
         noStroke();
-        rect(0, 1050, windowWidth, 250);
+        rect(0, 1050, windowWidth, 275);
         //text_area.innerHTML = content_home3[8];
         if(pineTrail.isPlaying() == true){
             pineTrail.pause();
