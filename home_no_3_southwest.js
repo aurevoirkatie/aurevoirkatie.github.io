@@ -104,7 +104,7 @@ function setup() {
         rect(0, 0, windowWidth, 500);
         // if (timeinseconds >= pineTrail.duration()){
         // pineTrail.stop();
-    };
+    //};
     };
 // function stopR(){
 //     recorder.stop();
