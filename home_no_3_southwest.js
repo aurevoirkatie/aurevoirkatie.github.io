@@ -1,20 +1,25 @@
 var myBody = document.getElementsByTagName("body");
 
 function success() {
-    myBody[0].style.backgroundColor = "#000000";
+    background(51);
     console.log("hiiiii");
+}
+
+function error() {
+    myBody[0].style.backgroundColor = "#ffffff";
+    console.log("oops");
 }
 
 function preload() {
  soundFormats('mp3', 'ogg');
-    pineTrail = loadSound('assets/creak.mp3', success);
-    threeZero = loadSound('assets/0three-zero.mp3', success);
-    threeOne = loadSound('assets/three-one.mp3', success);
-    threeThree = loadSound('assets/three-three.mp3', success);
-    threeFive = loadSound('assets/three-five.mp3', success);
-    threeEight = loadSound('assets/0three-eight.mp3', success);
-    threeNine = loadSound('assets/0three-nine.mp3', success);
-    vocal = loadSound('assets/vocal.mp3', success);
+    pineTrail = loadSound('assets/creak.mp3', success, error);
+    threeZero = loadSound('assets/0three-zero.mp3', success, error);
+    threeOne = loadSound('assets/three-one.mp3', success, error);
+    threeThree = loadSound('assets/three-three.mp3', success, error);
+    threeFive = loadSound('assets/three-five.mp3', success, error);
+    threeEight = loadSound('assets/0three-eight.mp3', success, error);
+    threeNine = loadSound('assets/0three-nine.mp3', success, error);
+    vocal = loadSound('assets/vocal.mp3', success, error);
 };
 
 var text_area;
