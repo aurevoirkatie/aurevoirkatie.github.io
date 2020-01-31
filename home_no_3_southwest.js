@@ -84,8 +84,8 @@ function setup() {
 
     function playbaqq() {
     var freq = filterFreq;
-        filter.freq(freq);
-        filter.res(i);
+     //   filter.freq(freq);
+     //   filter.res(i);
         if(threeZero.isPlaying() == true){
              threeZero.pause();
              };
@@ -134,10 +134,10 @@ function draw(){
     var timeinseconds = timer/60
 
 
-    if (filterFreq <= 8000){
-        filterFreq = filterFreq + 1.6;
-    } else {filterFreq = filterFreq - 1.6
-    };
+  //  if (filterFreq <= 8000){
+    //    filterFreq = filterFreq + 1.6;
+    //} else {filterFreq = filterFreq - 1.6
+    //};
 
     if (timeinseconds == 240){
         if (i <= 1000){
