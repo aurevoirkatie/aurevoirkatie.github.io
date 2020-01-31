@@ -57,14 +57,14 @@ function setup() {
     text_area = document.getElementById("compass_content");
     timeinseconds = 0;
     i = .001;
-  //  filterFreq = 100;
-  //  filter = new p5.BandPass();
+    filterFreq = 100;
+    filter = new p5.BandPass();
     pineTrail.disconnect();
-  //  pineTrail.connect(filter);
-  //  filter.amp(1.0, 20, 0)
+    pineTrail.connect(filter);
+    filter.amp(1.0, 20, 0)
 
     timer = 0;
-  //  textFont("courier", 25);
+    textFont("courier", 25);
 
 // //recording setup
 //     state = 0;
