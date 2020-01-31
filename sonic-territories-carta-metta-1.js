@@ -1,9 +1,9 @@
 var myBody = document.getElementsByTagName("body");
 
-function success() {
+/*function success() {
     myBody[0].style.backgroundColor = "#000000";
     console.log("hiiiii");
-}
+}*/
 
 /*function preload() {
  soundFormats('mp3', 'ogg');
@@ -27,6 +27,10 @@ var mic;
 var recorder;
 var soundFile;
 var state;
+var recordButton;
+var playButton;
+var backgroundColor;
+var cnv;
 // var contentIndex;
 // var printedText;
 // var textTimer;
@@ -37,12 +41,13 @@ var state;
 // var splitTimer;
 
 function setup() {
-    canvas = createCanvas(windowWidth, windowHeight);
+    cnv = createCanvas(windowWidth, windowHeight);
+    cnv.style('display', 'block');
     text_area = document.getElementById("compass_content");
-    timeinseconds = 0;
-    i = .001;
-    timer = 0;
-    textFont("courier", 25);
+//    timeinseconds = 0;
+//    i = .001;
+//   timer = 0;
+//    textFont("courier", 25);
 //recording setup
     state = 0;
     mic = new p5.AudioIn();
@@ -50,35 +55,22 @@ function setup() {
     recorder = new p5.SoundRecorder();
     recorder.setInput(mic);
     soundFile = new p5.SoundFile();
-    text('keyPress to record', 20, 20);
 
-    text_area.innerHTML = "";
-        fill(0);
-        noStroke();
-        rect(0, 0, windowWidth, 500);
+//IDK what text_area part means??//
+    backgroundColor = color(100, 50, 150);
+//    text_area.innerHTML = "";
 
-   /* pineTrail.setVolume(1.0);
-    pineTrail.playMode('untilDone');
-    threeZero.setVolume(1.0);
-    threeZero.playMode('untilDone');
-    threeOne.setVolume(1.0);
-    threeOne.playMode('untilDone');
-    threeThree.setVolume(1.0);
-    threeThree.playMode('untilDone');
-    threeFive.setVolume(1.0);
-    threeFive.playMode('untilDone');
-    threeEight.setVolume(1.0);
-    threeEight.playMode('untilDone');
-    threeNine.setVolume(1.0);
-    threeNine.playMode('untilDone');
-    content_home3 = ["3.0 three", "3.1 Deciduous trees, vines and undergrowth \n cascade down the hill behind", "3.2 fourteen meshed windows \n that fall out of unpainted clapboard: \n two rooms on bottom and two on top. \n Rain drips louder than distant trucks passing", "3.3 who slice the landscape perpendicular", "3.4 to water systems’ homely stasis: (up, down).", "3.5 Bowed wooden exterior \n shrugs damply into earth.", "3.6 Mutely, it suggests \n a dozen daughters or sons, sleeves rolled, \n braiding hair and, in summer shade, \n shoveling (this was when", "3.7 wealth came from below.)\n It took one hundred passes \n for me to see the home. \n Walking here my head is usually down, \n searching for shiny stones.", "3.8  Quartz rock is abundant here: \n left behind by waters that bore it, left,", "3.9 upstream, northeast."];
-*/
+//BUTTONS
+    recordButton = createButton('press + hold to record');
+    recordButton.position(0,0);
+    recordButton.mousePressed(rec);
+    recordButton.mouseReleased(stop);
 
-/*    filterFreq = 100;
-    filter = new p5.BandPass();
-    pineTrail.disconnect();
-    pineTrail.connect(filter);
-    filter.amp(1.0, 20, 0)*/
+    playButton = createButton('play');
+    playButton.position (10,10);
+    playButton.mousePressed(play);
+        
+}
 
   
 /*window.addEventListener('deviceorientation', function(e) {
@@ -89,58 +81,48 @@ function setup() {
         });
     };
 
-function playbaqq() {
-    var freq = filterFreq;
-     //   filter.freq(freq);
-     //   filter.res(i);
-/*        if(threeZero.isPlaying() == true){
-             threeZero.pause();
-             };
-        if(threeNine.isPlaying() == true){
-             threeNine.pause();
-             };
-        if(threeOne.isPlaying() == true){
-             threeOne.pause();
-             };
-        if(threeFive.isPlaying() == true){
-             threeFive.pause();
-             };*/
-        
-        // if (timeinseconds >= pineTrail.duration()){
-        // pineTrail.stop();
-    //};
 
-// function stopR(){
-//     recorder.stop();
-//     saveSound(soundFile,'rec1.wav');
-// }
-    }
-// end SETUP
+/*function keyPressed (){
 
-function keyPressed (){
-    if (state === 0 && mic.enabled) {
+    else if (state === 1) {
+       background(0,255,0);
+       recorder.stop();
+       text('Stopped', 20, 20);
+       state++;
+       }
+    else if (state === 2) {
+        background(0,0,255);
+        save(soundFile, 'mySound.mp3');
+        soundFile.play(); //play the result
+        state++;
+        }
+    }*/
+    
+function rec(){
+    if (mic.enabled) {
         recorder.record(soundFile);
         background (255,0,0);
         text('Recording!', 20, 20);
         state++;
-        }
-    else if  (state === 1) {
-        background(0,255,0);
-        //stop recorder and send result to soundFile
-        recorder.stop();
-        text('Stopped', 20,20);
-        state++;
-        }
-    else if (state === 2) {
-        soundFile.play(); //play the result
-        save(soundFile, 'mySound.wav');
-        state++;
-        }
     }
-    
+}
 
+function stop(){
+    recorder.stop();
+    text('Stopped', 20, 20);
+    state++;
+}
+
+function play(){
+    save(soundFile, 'mySound.mp3');
+    soundFile.play(); //play the result
+    state++;
+}
        
-//function draw(){
+function draw(){
+    backgroundColor.setRed(128 + 128 * sin(millis() / 1000));
+  background(backgroundColor);
+};
 
 //blue floor
 //    fill(0,0,255);
@@ -347,4 +329,7 @@ function keyPressed (){
     };
 
 };*/
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+};
 
